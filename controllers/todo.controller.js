@@ -1,5 +1,5 @@
 const asynchandler =require("express-async-handler")
-const Todo= require("module/Todo")
+const Todo = require("../mobile/Todo")
 
 exports.getAllTodos = asynchandler(async(req,res)=>{
     const result =await Todo.find()

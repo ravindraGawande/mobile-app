@@ -1,10 +1,10 @@
 const {getAllTodos, addTodos, updateTodos, deleteTodos}=require ('../controllers/todo.controller')
 
-const router = require("expree").router()
+const router = require("express").Router()
 router
 .get("/",getAllTodos)
 .post("/",addTodos)
-.PUT("/id",updateTodos)
-.delete("/id",deleteTodos)
+.put("/:id",updateTodos)
+.delete("/:id",deleteTodos)
 
 module.exports = router
